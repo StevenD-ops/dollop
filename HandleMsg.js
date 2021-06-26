@@ -12,7 +12,6 @@ const bent = require('bent')
 const path = require('path')
 const bdr = require('rumus-bdr')
 const ffmpeg = require('fluent-ffmpeg')
-const canvas = require('canvacord')
 const request = require('request-promise')
 const emojiUnicode = require('emoji-unicode')
 const get = require('got')
@@ -218,7 +217,7 @@ module.exports = HandleMsg = async (aruga, message) => {
 		const StickerMetadatacrop = { author : '@thoriqazzikra_', pack: 'Urbaeexyz', keepScale: false }
 
         // [IDENTIFY]
-        const ownerNumber = '62895334951166@c.us'
+        const ownerNumber = '18099152058@c.us'
         const isOwnerBot = ownerNumber.includes(pengirim)
         const isOwner = ownerNumber.includes(pengirim)
         const isOwnerB = ownerNumber.includes(pengirim)
@@ -386,7 +385,7 @@ module.exports = HandleMsg = async (aruga, message) => {
 
         const mess = {
             wait: '_Waitt, lemme process this shit_',
-			prem: `Command Premium!\nHalo ${pushname} Mau menjadi user premium? ga mahal kok gan\n5rb = 1 Minggu\n10rb = 1 Bulan\n\nJika anda berminat, silahkan chat pada Owner\n\nwa.me/62895334951166\n\nTrims~\n-Thoriq Azzikra`,
+			prem: `Command Premium!\nHalo ${pushname} Mau menjadi user premium? ga mahal kok gan\n5rb = 1 Minggu\n10rb = 1 Bulan\n\nJika anda berminat, silahkan chat pada Owner\n\nwa.me/18099152058\n\nTrims~\n-Thoriq Azzikra`,
             error: {
                 St: `[❗] Kirim gambar dengan caption *${prefix}sticker* atau tag gambar yang sudah dikirim`,
                 Ti: `[❗] Replay sticker dengan caption *${prefix}stickertoimg* atau tag sticker yang sudah dikirim`,
@@ -4369,6 +4368,7 @@ console.log(err)
 		if (ownerNumber.includes(qmes)) return aruga.reply(from, 'Siapa lu mau ngekick Owner gua?', id)
 		if (botNumber.includes(qmes)) return aruga.reply(from, 'mau ngekick gua kah? akwoakwoa', id)
 		await aruga.removeParticipant(groupId, qmes)
+        4
 		await sleep(1000)
 		await aruga.addParticipant(from, qmes)
 		} catch {
